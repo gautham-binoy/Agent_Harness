@@ -393,6 +393,7 @@ harness compare --baseline baseline --candidate full-harness
 The interactive self-correction demo proves the core hypothesis in under 2 seconds:
 
 ```bash
+# Run the interactive demo (both ./scripts/ and ./script/ supported)
 ./scripts/run_demo.sh
 ```
 
@@ -415,12 +416,14 @@ harness dashboard --port 8000
 ```
 Open **http://localhost:8000** in your web browser.
 
+![Adaptive Coding Agent Harness Dashboard](docs/assets/dashboard.jpg)
+
 ### Features:
 * **6 KPI Cards**: Total runs, success rate, test pass rate, average runtime, average tokens, and average iterations.
-* **Comparison Banner**: Live delta metrics between Baseline and Full Harness.
-* **Ablation Summary Table**: Matrix showing performance across configurations.
+* **Comparison Banner**: Live delta metrics between Baseline and Full Harness (e.g. 71.4% $\rightarrow$ 100.0%, +28.6 pts absolute gain).
+* **Ablation Summary Table**: Matrix showing performance across configurations (Baseline, Repo Context, Test Feedback, Specialized Agent, Full Harness).
 * **4 Analytical Breakdown Charts**: Success by Difficulty, Success by Category, Failure Taxonomy, and Iteration Distribution.
-* **Expandable Execution Drawer**: Click any run row to view timing breakdowns, token usage, full test runner output, feedback prompts, and exact Git diffs.
+* **Expandable Execution Drawer**: Click any run row to view timing breakdowns (`agent_time`, `test_time`, `feedback_time`), token usage, full test runner output, feedback prompts, and exact Git diffs.
 
 ---
 
