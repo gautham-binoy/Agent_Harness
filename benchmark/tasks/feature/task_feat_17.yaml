@@ -1,0 +1,13 @@
+category: feature
+description: Add CommandDispatcher class linking CliParser and OutputFormatter.
+difficulty: hard
+expected_behavior: Dispatches commands and formats JSON outputs.
+expected_changed_files:
+- cli/commands.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_feat_17
+repository: python_cli
+setup_action: stub_command_dispatcher
+test_command: pytest -q tests/test_cli.py
+timeout: 120
+title: Add command dispatcher to Python CLI

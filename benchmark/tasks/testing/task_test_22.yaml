@@ -1,0 +1,14 @@
+category: testing
+description: Add tests for POST /items checking status 201 on valid input and 400
+  on empty title.
+difficulty: medium
+expected_behavior: Pytest suite verifies item creation assertions.
+expected_changed_files:
+- tests/test_main.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_create_item_whitespace_rejection
+id: task_test_22
+repository: fastapi_app
+setup_action: remove_item_tests
+test_command: pytest -q tests/test_main.py -k item
+timeout: 120
+title: Write unit tests for item creation and validation

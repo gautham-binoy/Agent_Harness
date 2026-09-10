@@ -1,0 +1,13 @@
+category: testing
+description: Write pytest cases for parse_key_value and parse_json_input.
+difficulty: easy
+expected_behavior: All CLI parser test cases pass.
+expected_changed_files:
+- tests/test_cli.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_test_23
+repository: python_cli
+setup_action: remove_parser_tests
+test_command: pytest -q tests/test_cli.py -k parser
+timeout: 120
+title: Write unit tests for CLI argument parser

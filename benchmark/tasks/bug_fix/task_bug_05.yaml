@@ -1,0 +1,15 @@
+category: bug_fix
+description: CliParser.parse_key_value drops arguments without equals sign gracefully
+  without raising UnboundLocalError.
+difficulty: easy
+expected_behavior: Ignore arguments without equals sign and trim whitespace from keys
+  and values.
+expected_changed_files:
+- cli/parser.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_parser_multiple_equals
+id: task_bug_05
+repository: python_cli
+setup_action: break_key_value_trim
+test_command: pytest -q tests/test_cli.py -k test_parse_key_value
+timeout: 120
+title: Handle empty CLI key-value arguments

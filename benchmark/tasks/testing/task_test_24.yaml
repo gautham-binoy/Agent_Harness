@@ -1,0 +1,13 @@
+category: testing
+description: Add test case verifying CSV line conversion with headers and values.
+difficulty: easy
+expected_behavior: Test asserts CSV structure matches expected lines.
+expected_changed_files:
+- tests/test_cli.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_formatter_empty_items
+id: task_test_24
+repository: python_cli
+setup_action: remove_csv_tests
+test_command: pytest -q tests/test_cli.py -k csv
+timeout: 120
+title: Write tests for CLI CSV formatter

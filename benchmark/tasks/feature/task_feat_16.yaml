@@ -1,0 +1,14 @@
+category: feature
+description: Implement POST /items accepting ItemCreate schema and returning 201 Created.
+difficulty: medium
+expected_behavior: Creates item in ITEMS_DB and returns created item with generated
+  ID.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_create_item_whitespace_rejection
+id: task_feat_16
+repository: fastapi_app
+setup_action: stub_item_create
+test_command: pytest -q tests/test_main.py -k test_create_item_success
+timeout: 120
+title: Add item creation endpoint with validation

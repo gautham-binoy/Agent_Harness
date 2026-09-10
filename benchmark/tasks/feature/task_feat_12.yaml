@@ -1,0 +1,14 @@
+category: feature
+description: 'Add handle_status method returning {''status'': ''active'', ''version'':
+  ''1.0.0''}.'
+difficulty: easy
+expected_behavior: handle_status returns dictionary with active status.
+expected_changed_files:
+- cli/commands.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_feat_12
+repository: python_cli
+setup_action: stub_status_command
+test_command: pytest -q tests/test_cli.py -k test_command_status
+timeout: 120
+title: Add status endpoint to Python CLI dispatcher

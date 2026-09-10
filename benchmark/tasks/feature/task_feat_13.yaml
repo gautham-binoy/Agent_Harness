@@ -1,0 +1,14 @@
+category: feature
+description: Implement to_csv_lines(items) converting list of dictionaries to comma-separated
+  lines with headers.
+difficulty: medium
+expected_behavior: Returns list of string lines formatted as CSV.
+expected_changed_files:
+- cli/formatter.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_formatter_empty_items
+id: task_feat_13
+repository: python_cli
+setup_action: stub_csv_formatter
+test_command: pytest -q tests/test_cli.py -k test_formatter_csv
+timeout: 120
+title: Add CSV output formatter to CLI

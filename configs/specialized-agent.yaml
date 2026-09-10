@@ -1,0 +1,30 @@
+name: specialized-agent
+
+agent:
+  mode: developer
+  temperature: 0.2
+
+context:
+  repository_summary: false
+  git_status: false
+  directory_tree: false
+
+tools:
+  filesystem:
+    read: true
+    write: true
+  terminal:
+    enabled: true
+  git:
+    read: true
+    write: false
+  tests:
+    enabled: false
+  linter:
+    enabled: false
+
+feedback:
+  tests: false
+  linter: false
+
+max_iterations: 1

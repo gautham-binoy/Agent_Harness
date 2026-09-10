@@ -1,0 +1,14 @@
+category: bug_fix
+description: GET /items/{item_id} should return 404 with detail 'Item not found' when
+  ID does not exist.
+difficulty: medium
+expected_behavior: Raise HTTPException(status_code=404, detail='Item not found').
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_bug_08
+repository: fastapi_app
+setup_action: remove_item_404
+test_command: pytest -q tests/test_main.py
+timeout: 120
+title: Fix item 404 response on missing item ID

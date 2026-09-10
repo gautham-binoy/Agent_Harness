@@ -1,0 +1,13 @@
+category: feature
+description: Return token string mock_token_<username> upon successful authentication.
+difficulty: easy
+expected_behavior: Login returns token field in JSON payload.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_login_edge_cases
+id: task_feat_19
+repository: fastapi_app
+setup_action: stub_login_token
+test_command: pytest -q tests/test_main.py -k test_login_success
+timeout: 120
+title: Add token response to login endpoint

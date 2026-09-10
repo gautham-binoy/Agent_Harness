@@ -1,0 +1,13 @@
+category: migration
+description: Ensure __all__ and clean public interfaces across cli package modules.
+difficulty: hard
+expected_behavior: Imports and CLI tests execute cleanly.
+expected_changed_files:
+- cli/__init__.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_mig_30
+repository: python_cli
+setup_action: break_cli_exports
+test_command: pytest -q tests/test_cli.py
+timeout: 120
+title: Standardize CLI module exports and entry points

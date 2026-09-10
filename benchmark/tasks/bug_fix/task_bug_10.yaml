@@ -1,0 +1,14 @@
+category: bug_fix
+description: OutputFormatter.to_csv_lines should return an empty list when input items
+  list is empty.
+difficulty: hard
+expected_behavior: Return [] when items is empty.
+expected_changed_files:
+- cli/formatter.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_formatter_empty_items
+id: task_bug_10
+repository: python_cli
+setup_action: break_csv_empty
+test_command: pytest -q tests/test_cli.py -k test_formatter_csv
+timeout: 120
+title: Fix CSV formatter with empty input list

@@ -1,0 +1,15 @@
+category: bug_fix
+description: calculateMetrics should explicitly validate input type and throw TypeError
+  if input is not an Array.
+difficulty: hard
+expected_behavior: Throw TypeError('Expected an array of numbers') when input is null
+  or not an array.
+expected_changed_files:
+- index.js
+hidden_test_command: node --test test_hidden.js
+id: task_bug_09
+repository: node_app
+setup_action: remove_type_check
+test_command: node --test test.js
+timeout: 120
+title: Ensure non-array inputs throw TypeError in calculateMetrics

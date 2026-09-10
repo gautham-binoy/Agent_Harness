@@ -1,0 +1,30 @@
+name: full-harness
+
+agent:
+  mode: developer
+  temperature: 0.2
+
+context:
+  repository_summary: true
+  git_status: true
+  directory_tree: true
+
+tools:
+  filesystem:
+    read: true
+    write: true
+  terminal:
+    enabled: true
+  git:
+    read: true
+    write: false
+  tests:
+    enabled: true
+  linter:
+    enabled: true
+
+feedback:
+  tests: true
+  linter: true
+
+max_iterations: 5

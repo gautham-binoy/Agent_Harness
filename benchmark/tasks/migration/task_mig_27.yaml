@@ -1,0 +1,15 @@
+category: migration
+description: Adopt PEP 604 union syntax (X | Y) and modern type hints across parser
+  and formatter.
+difficulty: easy
+expected_behavior: CLI tests pass with modern type hints.
+expected_changed_files:
+- cli/parser.py
+- cli/formatter.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_mig_27
+repository: python_cli
+setup_action: legacy_type_hints
+test_command: pytest -q tests/test_cli.py
+timeout: 120
+title: Upgrade CLI parser to Python 3.11+ union type annotations

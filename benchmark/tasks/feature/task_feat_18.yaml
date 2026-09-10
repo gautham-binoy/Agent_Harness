@@ -1,0 +1,13 @@
+category: feature
+description: Implement calculateMetrics returning count, sum, and average of numbers.
+difficulty: easy
+expected_behavior: calculateMetrics returns correct statistics.
+expected_changed_files:
+- index.js
+hidden_test_command: node --test test_hidden.js
+id: task_feat_18
+repository: node_app
+setup_action: stub_calculate_metrics
+test_command: node --test test.js
+timeout: 120
+title: Add array metrics aggregation function in Node

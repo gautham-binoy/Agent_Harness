@@ -1,0 +1,30 @@
+name: ablation-c-tests
+
+agent:
+  mode: developer
+  temperature: 0.2
+
+context:
+  repository_summary: false
+  git_status: false
+  directory_tree: false
+
+tools:
+  filesystem:
+    read: true
+    write: true
+  terminal:
+    enabled: true
+  git:
+    read: true
+    write: false
+  tests:
+    enabled: true
+  linter:
+    enabled: false
+
+feedback:
+  tests: true
+  linter: false
+
+max_iterations: 5

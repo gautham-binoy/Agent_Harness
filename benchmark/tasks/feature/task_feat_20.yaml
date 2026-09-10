@@ -1,0 +1,14 @@
+category: feature
+description: Add parse_json_input method to CliParser handling valid and empty inputs.
+difficulty: hard
+expected_behavior: Returns parsed dict for valid JSON and raises ValueError on empty
+  input.
+expected_changed_files:
+- cli/parser.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_parser_unicode_json
+id: task_feat_20
+repository: python_cli
+setup_action: stub_json_parser
+test_command: pytest -q tests/test_cli.py -k test_parse_json_valid
+timeout: 120
+title: Add JSON parser with error handling to CLI

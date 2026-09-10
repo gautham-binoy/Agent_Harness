@@ -1,0 +1,14 @@
+category: migration
+description: Migrate tests from external test frameworks to built-in node:test and
+  node:assert modules.
+difficulty: medium
+expected_behavior: node --test test.js runs and passes natively.
+expected_changed_files:
+- test.js
+hidden_test_command: node --test test_hidden.js
+id: task_mig_28
+repository: node_app
+setup_action: legacy_node_tests
+test_command: node --test test.js
+timeout: 120
+title: Migrate Node test suite to native node:test runner

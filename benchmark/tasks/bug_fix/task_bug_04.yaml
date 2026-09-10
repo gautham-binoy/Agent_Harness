@@ -1,0 +1,15 @@
+category: bug_fix
+description: CliParser.parse_json_input crashes with raw JSONDecodeError instead of
+  raising a user-friendly ValueError.
+difficulty: medium
+expected_behavior: Catch json.JSONDecodeError and raise ValueError with 'Malformed
+  JSON payload'.
+expected_changed_files:
+- cli/parser.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_parser_unicode_json
+id: task_bug_04
+repository: python_cli
+setup_action: remove_json_error_handling
+test_command: pytest -q tests/test_cli.py -k test_parse_json_invalid
+timeout: 120
+title: Fix CLI malformed JSON crash

@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  harness:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: adaptive-coding-agent-harness
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - GEMINI_MODEL=${GEMINI_MODEL:-google/gemini-2.5-flash}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - DB_PATH=/app/runs.db
+    volumes:
+      - ./runs.db:/app/runs.db
+      - ./reports:/app/reports
+      - ./workspace:/app/workspace
+    ports:
+      - "8000:8000"
+    command: ["dashboard", "--host", "0.0.0.0", "--port", "8000"]

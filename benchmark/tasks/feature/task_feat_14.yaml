@@ -1,0 +1,13 @@
+category: feature
+description: 'Add GET / returning {''status'': ''ok'', ''service'': ''TaskFlow''}.'
+difficulty: easy
+expected_behavior: Root endpoint returns 200 with service health info.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_feat_14
+repository: fastapi_app
+setup_action: stub_root_endpoint
+test_command: pytest -q tests/test_main.py -k test_root
+timeout: 120
+title: Add service root health check

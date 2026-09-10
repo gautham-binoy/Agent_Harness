@@ -1,0 +1,14 @@
+category: bug_fix
+description: The login endpoint should return 400 Bad Request when password is missing
+  or empty, instead of raising an internal error.
+difficulty: easy
+expected_behavior: Return 400 with detail message when password is empty or omitted.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_login_edge_cases
+id: task_bug_01
+repository: fastapi_app
+setup_action: remove_password_check
+test_command: pytest -q tests/test_main.py -k test_login_missing_password
+timeout: 120
+title: Fix login missing password validation

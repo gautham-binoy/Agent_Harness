@@ -1,0 +1,14 @@
+category: testing
+description: Write unit tests for parseQueryString covering query strings with and
+  without leading ?.
+difficulty: hard
+expected_behavior: Node tests pass verifying query string extraction.
+expected_changed_files:
+- test.js
+hidden_test_command: node --test test_hidden.js
+id: task_test_25
+repository: node_app
+setup_action: remove_query_tests
+test_command: node --test test.js
+timeout: 120
+title: Write node tests for query string parsing

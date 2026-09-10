@@ -1,0 +1,14 @@
+category: bug_fix
+description: 'calculateMetrics throws division by zero NaN on empty array. It should
+  return average: 0.'
+difficulty: medium
+expected_behavior: 'Return { count: 0, sum: 0, average: 0 } on empty array.'
+expected_changed_files:
+- index.js
+hidden_test_command: node --test test_hidden.js
+id: task_bug_06
+repository: node_app
+setup_action: remove_empty_array_check
+test_command: node --test test.js
+timeout: 120
+title: Fix Node service empty array metrics calculation

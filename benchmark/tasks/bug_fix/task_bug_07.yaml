@@ -1,0 +1,14 @@
+category: bug_fix
+description: parseQueryString includes the leading ? in the first parameter name.
+  Strip leading ? before parsing.
+difficulty: medium
+expected_behavior: Strip ? so keys are not corrupted.
+expected_changed_files:
+- index.js
+hidden_test_command: node --test test_hidden.js
+id: task_bug_07
+repository: node_app
+setup_action: remove_leading_query_strip
+test_command: node --test test.js
+timeout: 120
+title: Fix query string leading question mark parsing

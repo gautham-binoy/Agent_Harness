@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-09-10T20:04:48.239339",
+  "baseline": {
+    "config_name": "baseline",
+    "total_tasks": 7,
+    "successful_tasks": 5,
+    "partial_tasks": 0,
+    "failed_tasks": 2,
+    "success_rate": 71.4,
+    "test_pass_rate": 71.4,
+    "avg_duration_seconds": 0.45,
+    "median_duration_seconds": 0.55,
+    "stddev_duration": 0.19,
+    "avg_iterations": 1.0,
+    "median_iterations": 1.0,
+    "avg_agent_time": 0.0,
+    "avg_test_time": 0.24,
+    "avg_feedback_time": 0.0,
+    "total_input_tokens": 19040,
+    "total_output_tokens": 4510,
+    "total_tokens": 23550,
+    "avg_tokens_per_task": 3364,
+    "median_tokens_per_task": 3050,
+    "tokens_available": true,
+    "total_tool_calls": {
+      "read": 47,
+      "edit": 7,
+      "bash": 7
+    },
+    "failure_breakdown": {
+      "test_failure": 2
+    },
+    "iteration_distribution": {
+      "1": 7
+    },
+    "difficulty_breakdown": {
+      "easy": {
+        "total": 4,
+        "success": 2,
+        "rate": 50.0
+      },
+      "medium": {
+        "total": 2,
+        "success": 2,
+        "rate": 100.0
+      },
+      "hard": {
+        "total": 1,
+        "success": 1,
+        "rate": 100.0
+      }
+    },
+    "category_breakdown": {
+      "bug_fix": {
+        "total": 7,
+        "success": 5,
+        "rate": 71.4
+      }
+    }
+  },
+  "candidate": {
+    "config_name": "full-harness",
+    "total_tasks": 8,
+    "successful_tasks": 8,
+    "partial_tasks": 0,
+    "failed_tasks": 0,
+    "success_rate": 100.0,
+    "test_pass_rate": 100.0,
+    "avg_duration_seconds": 0.95,
+    "median_duration_seconds": 0.57,
+    "stddev_duration": 0.78,
+    "avg_iterations": 1.5,
+    "median_iterations": 1.0,
+    "avg_agent_time": 0.0,
+    "avg_test_time": 0.75,
+    "avg_feedback_time": 0.0,
+    "total_input_tokens": 32440,
+    "total_output_tokens": 7680,
+    "total_tokens": 40120,
+    "avg_tokens_per_task": 5015,
+    "median_tokens_per_task": 4575,
+    "tokens_available": true,
+    "total_tool_calls": {
+      "read": 80,
+      "edit": 12,
+      "bash": 12
+    },
+    "failure_breakdown": {},
+    "iteration_distribution": {
+      "1": 5,
+      "2": 2,
+      "3": 1
+    },
+    "difficulty_breakdown": {
+      "easy": {
+        "total": 5,
+        "success": 5,
+        "rate": 100.0
+      },
+      "medium": {
+        "total": 2,
+        "success": 2,
+        "rate": 100.0
+      },
+      "hard": {
+        "total": 1,
+        "success": 1,
+        "rate": 100.0
+      }
+    },
+    "category_breakdown": {
+      "bug_fix": {
+        "total": 8,
+        "success": 8,
+        "rate": 100.0
+      }
+    }
+  },
+  "improvements": {
+    "absolute_success_improvement": 28.6,
+    "relative_success_improvement": 40.1,
+    "test_pass_improvement": 28.6,
+    "runtime_change_seconds": 0.5,
+    "iteration_change": 0.5,
+    "token_change": 1651
+  }
+}

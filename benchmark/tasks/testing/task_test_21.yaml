@@ -1,0 +1,13 @@
+category: testing
+description: Add unit tests covering success, invalid credentials, and missing passwords.
+difficulty: medium
+expected_behavior: Tests execute and verify login endpoint behavior.
+expected_changed_files:
+- tests/test_main.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_login_edge_cases
+id: task_test_21
+repository: fastapi_app
+setup_action: remove_login_tests
+test_command: pytest -q tests/test_main.py -k login
+timeout: 120
+title: Write comprehensive unit tests for FastAPI login endpoint

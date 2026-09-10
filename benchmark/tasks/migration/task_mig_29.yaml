@@ -1,0 +1,14 @@
+category: migration
+description: Replace magic numeric status codes with standard HTTP status codes or
+  status module.
+difficulty: medium
+expected_behavior: All FastAPI tests pass with modern status codes.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_mig_29
+repository: fastapi_app
+setup_action: inject_magic_numbers
+test_command: pytest -q tests/test_main.py
+timeout: 120
+title: Modernize FastAPI status codes to HTTPStatus enum/constants

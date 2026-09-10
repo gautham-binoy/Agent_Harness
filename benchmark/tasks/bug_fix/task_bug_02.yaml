@@ -1,0 +1,14 @@
+category: bug_fix
+description: The login endpoint returns 500 on wrong password. It should return 401
+  Unauthorized.
+difficulty: easy
+expected_behavior: Return 401 Unauthorized when password does not match.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_login_edge_cases
+id: task_bug_02
+repository: fastapi_app
+setup_action: inject_login_500
+test_command: pytest -q tests/test_main.py -k test_login_invalid_password
+timeout: 120
+title: Fix invalid credential status code

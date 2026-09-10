@@ -1,0 +1,14 @@
+category: feature
+description: Add skip and limit query parameters to GET /items endpoint with default
+  skip=0 and limit=10.
+difficulty: medium
+expected_behavior: GET /items supports skip and limit pagination query params.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_items_pagination_bounds
+id: task_feat_11
+repository: fastapi_app
+setup_action: remove_pagination
+test_command: pytest -q tests/test_main.py -k test_list_items
+timeout: 120
+title: Add pagination parameters to list items endpoint

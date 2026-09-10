@@ -1,0 +1,14 @@
+category: bug_fix
+description: POST /items allows whitespace-only titles. It must reject whitespace-only
+  titles with 400.
+difficulty: medium
+expected_behavior: Return 400 when title consists purely of whitespace.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py -k test_hidden_create_item_whitespace_rejection
+id: task_bug_03
+repository: fastapi_app
+setup_action: allow_blank_title
+test_command: pytest -q tests/test_main.py -k test_create_item_empty_title
+timeout: 120
+title: Prevent creation of item with blank title

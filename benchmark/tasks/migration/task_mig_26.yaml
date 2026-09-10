@@ -1,0 +1,14 @@
+category: migration
+description: Ensure ItemCreate and LoginRequest use modern Pydantic V2 class definitions
+  and defaults.
+difficulty: medium
+expected_behavior: All routes and tests pass under Pydantic V2.
+expected_changed_files:
+- app/main.py
+hidden_test_command: pytest -q tests/test_hidden.py
+id: task_mig_26
+repository: fastapi_app
+setup_action: downgrade_pydantic_syntax
+test_command: pytest -q tests/test_main.py
+timeout: 120
+title: Migrate FastAPI Pydantic V1 schema syntax to V2

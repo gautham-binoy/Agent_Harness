@@ -1,0 +1,14 @@
+category: feature
+description: Implement parseQueryString(qs) function extracting query parameter key-value
+  pairs into an object.
+difficulty: medium
+expected_behavior: parseQueryString returns parsed key-value object.
+expected_changed_files:
+- index.js
+hidden_test_command: node --test test_hidden.js
+id: task_feat_15
+repository: node_app
+setup_action: stub_query_parser
+test_command: node --test test.js
+timeout: 120
+title: Add query string parser to Node service
